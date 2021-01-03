@@ -1,10 +1,15 @@
 import TodoItem from './TodoItem.jsx';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, markDone, deleteItem }) => {
 
   return ( 
     <div className="todo-list">
-      {todos.map( value => <TodoItem value={value} /> )}
+      {todos.map( (value, index) => 
+        <TodoItem 
+          value={value} 
+          markDone={markDone} 
+          deleteItem={deleteItem} 
+          id={`Todo#${index}`}/> )}
     </div> 
   )
 }

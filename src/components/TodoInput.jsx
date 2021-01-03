@@ -1,11 +1,10 @@
-const TodoInput = ({ input, setInput, clickHandler }) => {
+const TodoInput = ({ input, changeHandler, clickHandler }) => {
   return ( <div>
     <form>
       <input id="todo-input" 
         type="text" 
         placeholder="New todo..." 
-        value={input} 
-        onChange={(value) => setInput(value)}>
+        onChange={changeHandler}>
       </input>
       <button
         onClick={clickHandler}>
