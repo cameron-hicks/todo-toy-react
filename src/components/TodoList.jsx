@@ -9,7 +9,8 @@ const TodoList = ({ todos, markDone, deleteItem }) => {
           value={value} 
           markDone={markDone} 
           deleteItem={deleteItem} 
-          id={`Todo#${index}`}/> )}
+          key={`Todo#${index}`}
+          index={index}/> )}
     </div> 
   )
 }

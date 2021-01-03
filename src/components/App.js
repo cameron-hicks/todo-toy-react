@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState(['Meal plan', 'Grocery shopping', 'Laundry']);
   const [finishedTodos, setFinishedTodos] = useState(['Work out', 'Put clothes away']);
   const [input, setInput] = useState('');
-  console.log(todos, finishedTodos, input);
+  console.log(todos, finishedTodos);
 
   const changeHandler = (event) => {
     setInput(event.target.value);
@@ -20,18 +20,30 @@ function App() {
     setInput('');
   }
 
+  // TODO: clicking delete on one to-do removes the first one
   const removeTodo = (index) => {
     const todosClone = [...todos];
     todosClone.splice(index, 1);
     return todosClone;
   }
 
+  // extract index from key string of format 'Todo#<index>'
+  // const getIndexFromKey = (key) => {
+  //   const index = key.split('#')[1];
+  //   // type-coerce to num and return
+  //   return index - 0;
+  // }
+
   const markDone = (index) => {
+    // const index = getIndexFromKey(key);
+    console.log(index);
     setFinishedTodos([...finishedTodos, todos[index]]);
     setTodos(removeTodo(index));
   }
 
+  // TODO: clicking delete on one to-do removes the first one
   const deleteItem = (index) => {
+    // const index = getIndexFromKey(key);
     setTodos(removeTodo(index));
   }
 

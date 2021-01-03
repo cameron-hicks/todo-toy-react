@@ -7,7 +7,8 @@ const FinishedTodos = ({ todos }) => {
       {todos.map( (value, index) => 
         <TodoItem 
           value={value} 
-          id={`Finished#${index}`}/> )}
+          key={`Finished#${index}`}
+          index={index}/> )}
     </div> 
   )
 }
