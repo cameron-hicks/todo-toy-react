@@ -1,12 +1,12 @@
 import TodoItem from './TodoItem.jsx';
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
 
-  const todos = [<TodoItem itemText="Do Me ;)"/>];
-
-  return ( <div>
-    {todos}
-  </div> )
+  return ( 
+    <div className="todo-list">
+      {todos.map( value => <TodoItem value={value} /> )}
+    </div> 
+  )
 }
 
 export default TodoList;
