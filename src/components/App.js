@@ -1,10 +1,23 @@
-import logo from './logo.svg';
-import './App.css';  
+import '../App.css';  
+import TodoInput from './TodoInput.jsx';
+import TodoList from './TodoList.jsx';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <h1>To-Do List</h1>
+        <TodoInput />
+      </header>
+      <TodoList />
+    </div>
+  );
+}
+
+export default App;
+
+
+/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Hi!
@@ -18,8 +31,4 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
-}
-
-export default App;
+*/
