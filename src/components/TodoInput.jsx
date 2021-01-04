@@ -1,14 +1,15 @@
 const TodoInput = ({ input, changeHandler, clickHandler }) => {
-  return ( <div>
+  return ( <div className="todo-input">
     <form>
-      <input id="todo-input" 
+      <input
         type="text" 
         placeholder="New todo..." 
+        value={input}
         onChange={changeHandler}>
       </input>
       <button
         onClick={clickHandler}>
-          Add 
+        <i class="far fa-plus-square"></i> 
       </button>
     </form>
   </div> )

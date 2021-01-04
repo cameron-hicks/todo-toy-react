@@ -4,10 +4,14 @@ const TodoList = ({ index, value, markDone, deleteItem }) => {
     <div>
       {markDone && <button 
         className="mark-done" 
-        onClick={(index) => markDone(index)}>Mark Done</button>}
+        onClick={() => markDone(index)}>
+          <i className="far fa-check-square"></i>
+        </button>}
       {deleteItem && <button 
         className="delete-item" 
-        onClick={(index) => deleteItem(index)}>Delete</button>}
+        onClick={() => deleteItem(index)}>
+          <i className="far fa-minus-square"></i>
+        </button>}
     </div>
     </div> )
 }
